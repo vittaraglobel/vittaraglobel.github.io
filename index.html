@@ -2901,6 +2901,7 @@
         <div class="modal-form-body">
             <h2 class="modal-title">Book a Consultation</h2>
             <p class="modal-sub">Free 30-minute discovery call with our team.</p>
+            <form action="https://formspree.io/f/xaqppadw" method="POST">
             <div class="form-row">
                 <div class="form-group">
                     <label>First Name *</label>
@@ -2908,7 +2909,7 @@
                     <span class="form-error-msg">Please enter your first name</span>
                 </div>
                 <div class="form-group">
-                    <label>Last Name *</label>
+                    <label>Last Name </label>
                     <input type="text" id="book-lname" placeholder="Smith">
                     <span class="form-error-msg">Please enter your last name</span>
                 </div>
@@ -2940,7 +2941,8 @@
                 </select>
                 <span class="form-error-msg">Please select a service</span>
             </div>
-            <button class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;" onclick="submitBooking()">Confirm Booking →</button>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;">Confirm Booking →</button>
+                </form>
         </div>
         <div class="modal-success" id="bookingSuccess">
             <div class="success-icon">✓</div>
