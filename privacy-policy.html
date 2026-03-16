@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Vittara Financial Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy:#0A1628;--navy-mid:#112240;--gold:#C9A84C;--gold-light:#E8C97A;--gold-pale:#F5EDD6;--white:#FFFFFF;--off-white:#F8F6F1;--text:#2C2C2C;--text-light:#6B7280;--border:#E5E0D5; }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+        .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+        .logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--navy);}
+        .logo-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:1px;}
+        .logo-sub{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+        .nav-back{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;font-weight:500;display:flex;align-items:center;gap:6px;transition:color 0.3s;}
+        .nav-back:hover{color:var(--gold);}
+
+        .page-hero{background:var(--navy);padding:140px 5% 60px;position:relative;overflow:hidden;}
+        .page-hero::before{content:'';position:absolute;top:-200px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%);border-radius:50%;}
+        .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:16px;}
+        .breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none;}
+        .breadcrumb a:hover{color:var(--gold);}
+        .breadcrumb span{margin:0 8px;}
+        .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,52px);font-weight:900;color:var(--white);margin-bottom:14px;}
+        .page-hero p{color:rgba(255,255,255,0.5);font-size:14px;}
+
+        .legal-layout{display:grid;grid-template-columns:240px 1fr;gap:60px;padding:60px 5%;max-width:1100px;margin:0 auto;align-items:start;}
+        @media(max-width:768px){.legal-layout{grid-template-columns:1fr;} .toc{display:none;}}
+        .toc{position:sticky;top:92px;background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:24px;}
+        .toc h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:16px;letter-spacing:0.5px;text-transform:uppercase;}
+        .toc ul{list-style:none;}
+        .toc li{margin-bottom:2px;}
+        .toc a{font-size:13px;color:var(--text-light);text-decoration:none;display:block;padding:6px 10px;border-radius:6px;transition:all 0.2s;}
+        .toc a:hover, .toc a.active{background:var(--gold-pale);color:var(--navy);font-weight:600;}
+
+        .legal-content{padding-bottom:60px;}
+        .legal-meta{background:var(--gold-pale);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 18px;font-size:13px;color:var(--navy);margin-bottom:36px;line-height:1.5;}
+        .legal-section{margin-bottom:40px;scroll-margin-top:90px;}
+        .legal-section h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--gold-pale);}
+        .legal-section h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--navy);margin:20px 0 10px;}
+        .legal-section p{font-size:15px;color:var(--text);line-height:1.8;margin-bottom:14px;}
+        .legal-section ul{margin:0 0 14px 20px;}
+        .legal-section li{font-size:15px;color:var(--text);line-height:1.8;margin-bottom:6px;}
+        .highlight-box{background:var(--off-white);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 20px;margin:20px 0;}
+        .highlight-box p{margin-bottom:0;font-size:14px;}
+        .contact-box{background:var(--navy);border-radius:16px;padding:28px;color:var(--white);margin-top:40px;}
+        .contact-box h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);margin-bottom:10px;}
+        .contact-box p{color:rgba(255,255,255,0.7);font-size:14px;line-height:1.6;margin-bottom:0;}
+        .contact-box a{color:var(--gold);text-decoration:none;}
+
+        footer{background:var(--navy);padding:40px 5%;text-align:center;}
+        footer p{font-size:13px;color:rgba(255,255,255,0.4);}
+        footer a{color:var(--gold);text-decoration:none;margin:0 8px;}
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="nav-logo">
+        <div class="logo-mark">V</div>
+        <div><div class="logo-name">VITTARA</div><div class="logo-sub">Financial Services</div></div>
+    </a>
+    <a href="index.html" class="nav-back">← Back to Website</a>
+</nav>
+
+<div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Privacy Policy</div>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: 1 January 2025 &nbsp;·&nbsp; Effective: 1 January 2025</p>
+</div>
+
+<div class="legal-layout">
+    <aside class="toc">
+        <h4>Contents</h4>
+        <ul>
+            <li><a href="#intro">1. Introduction</a></li>
+            <li><a href="#who-we-are">2. Who We Are</a></li>
+            <li><a href="#data-collect">3. Data We Collect</a></li>
+            <li><a href="#how-we-use">4. How We Use Data</a></li>
+            <li><a href="#legal-basis">5. Legal Basis</a></li>
+            <li><a href="#sharing">6. Data Sharing</a></li>
+            <li><a href="#transfers">7. International Transfers</a></li>
+            <li><a href="#retention">8. Data Retention</a></li>
+            <li><a href="#rights">9. Your Rights</a></li>
+            <li><a href="#security">10. Security</a></li>
+            <li><a href="#cookies">11. Cookies</a></li>
+            <li><a href="#children">12. Children</a></li>
+            <li><a href="#changes">13. Changes</a></li>
+            <li><a href="#contact-us">14. Contact Us</a></li>
+        </ul>
+    </aside>
+
+    <div class="legal-content">
+        <div class="legal-meta">
+            <strong>Summary:</strong> Vittara, founded by Darshik Pratapbhai Fataniya, is committed to protecting your personal data. We process data in accordance with UK GDPR and the Data Protection Act 2018. Our team is based in India but all services are directed at UK clients.
+        </div>
+
+        <div class="legal-section" id="intro">
+            <h2>1. Introduction</h2>
+            <p>This Privacy Policy explains how Vittara ("we", "us", "our") collects, uses, stores, and protects your personal information when you use our website, engage our services, or communicate with our team.</p>
+            <p>We are committed to handling your data responsibly and in full compliance with applicable data protection laws, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+        </div>
+
+        <div class="legal-section" id="who-we-are">
+            <h2>2. Who We Are</h2>
+            <p>Vittara is a financial services firm founded and operated by <strong>Darshik Pratapbhai Fataniya</strong>, headquartered in Porbandar, Gujarat, India. We source and serve UK-based individual and business clients, delivering accounting, taxation, paraplanning, and advisory services.</p>
+            <div class="highlight-box">
+                <p><strong>Data Controller:</strong> Darshik Pratapbhai Fataniya (trading as Vittara) · Email: privacy@vittara.co.uk · Address: Porbandar, Gujarat, India</p>
+            </div>
+        </div>
+
+        <div class="legal-section" id="data-collect">
+            <h2>3. Data We Collect</h2>
+            <h3>Information you provide directly</h3>
+            <ul>
+                <li>Name, email address, and telephone number (via contact or booking forms)</li>
+                <li>Business name, company registration number, UTR number</li>
+                <li>Financial records, tax documents, and bank statements shared for our services</li>
+                <li>National Insurance number and date of birth (where required for HMRC filing)</li>
+                <li>Payment information (processed through secure third-party providers)</li>
+            </ul>
+            <h3>Information collected automatically</h3>
+            <ul>
+                <li>IP address, browser type, and device information</li>
+                <li>Pages visited, time on site, and referral source</li>
+                <li>Cookie data (see section 11)</li>
+            </ul>
+            <h3>Information from third parties</h3>
+            <ul>
+                <li>HMRC data shared as part of authorised tax return processes</li>
+                <li>Accounting software data (Xero, QuickBooks) when you grant access</li>
+            </ul>
+        </div>
+
+        <div class="legal-section" id="how-we-use">
+            <h2>4. How We Use Your Data</h2>
+            <p>We use your personal data to:</p>
+            <ul>
+                <li>Provide accounting, tax, paraplanning, and advisory services</li>
+                <li>Communicate with you about your account, services, and appointments</li>
+                <li>Prepare and file tax returns, VAT returns, and financial statements with HMRC</li>
+                <li>Send service updates, deadline reminders, and relevant financial insights</li>
+                <li>Comply with our legal and regulatory obligations</li>
+                <li>Improve our website and service quality</li>
+                <li>Send marketing communications (only with your consent — you may opt out at any time)</li>
+            </ul>
+        </div>
+
+        <div class="legal-section" id="legal-basis">
+            <h2>5. Legal Basis for Processing</h2>
+            <p>We rely on the following legal bases under UK GDPR:</p>
+            <ul>
+                <li><strong>Contract performance</strong> — processing necessary to deliver your contracted services</li>
+                <li><strong>Legal obligation</strong> — compliance with HMRC, FCA, and other regulatory requirements</li>
+                <li><strong>Legitimate interests</strong> — improving our services, fraud prevention, security</li>
+                <li><strong>Consent</strong> — for marketing emails and non-essential cookies (you may withdraw consent at any time)</li>
+            </ul>
+        </div>
+
+        <div class="legal-section" id="sharing">
+            <h2>6. Data Sharing</h2>
+            <p>We do not sell your personal data. We may share your data with:</p>
+            <ul>
+                <li><strong>HMRC</strong> — as required for tax filing and compliance</li>
+                <li><strong>FCA-regulated bodies</strong> — where paraplanning services require it</li>
+                <li><strong>Cloud accounting platforms</strong> — Xero, QuickBooks (under data processing agreements)</li>
+                <li><strong>Professional advisers</strong> — where we need legal, audit, or specialist input</li>
+                <li><strong>IT service providers</strong> — for secure hosting, email, and website infrastructure</li>
+            </ul>
+            <p>All third parties are required to handle your data securely and in accordance with applicable law.</p>
+        </div>
+
+        <div class="legal-section" id="transfers">
+            <h2>7. International Data Transfers</h2>
+            <p>As a UK-focused firm operating from India, some of your data will be processed in India. We ensure all international transfers are protected by appropriate safeguards, including standard contractual clauses approved by the UK Information Commissioner's Office (ICO).</p>
+        </div>
+
+        <div class="legal-section" id="retention">
+            <h2>8. Data Retention</h2>
+            <p>We retain personal data for as long as necessary to fulfil the purposes for which it was collected, including legal and regulatory requirements:</p>
+            <ul>
+                <li><strong>Tax records:</strong> 6 years from the end of the relevant tax year (HMRC requirement)</li>
+                <li><strong>Financial records:</strong> 6 years from the date of the last transaction</li>
+                <li><strong>Marketing consent data:</strong> Until you withdraw consent or request deletion</li>
+                <li><strong>Website usage data:</strong> Up to 24 months</li>
+            </ul>
+        </div>
+
+        <div class="legal-section" id="rights">
+            <h2>9. Your Rights</h2>
+            <p>Under UK GDPR, you have the following rights:</p>
+            <ul>
+                <li><strong>Right of access</strong> — request a copy of the data we hold about you</li>
+                <li><strong>Right to rectification</strong> — request correction of inaccurate data</li>
+                <li><strong>Right to erasure</strong> — request deletion of your data (subject to legal obligations)</li>
+                <li><strong>Right to restriction</strong> — request we limit processing in certain circumstances</li>
+                <li><strong>Right to data portability</strong> — receive your data in a machine-readable format</li>
+                <li><strong>Right to object</strong> — object to processing based on legitimate interests</li>
+                <li><strong>Right to withdraw consent</strong> — at any time, for consent-based processing</li>
+            </ul>
+            <p>To exercise any of these rights, please email <strong>privacy@vittara.co.uk</strong>. We will respond within 30 days. You also have the right to lodge a complaint with the ICO at <strong>ico.org.uk</strong>.</p>
+        </div>
+
+        <div class="legal-section" id="security">
+            <h2>10. Security</h2>
+            <p>We implement appropriate technical and organisational measures to protect your personal data, including:</p>
+            <ul>
+                <li>SSL/TLS encryption for all data in transit</li>
+                <li>Encrypted storage for sensitive financial documents</li>
+                <li>Access controls — only authorised team members can access client data</li>
+                <li>Regular security reviews and staff training</li>
+            </ul>
+        </div>
+
+        <div class="legal-section" id="cookies">
+            <h2>11. Cookies</h2>
+            <p>We use cookies to improve your experience on our website. For full details, please see our <a href="cookie-policy.html" style="color:var(--gold);">Cookie Policy</a>.</p>
+        </div>
+
+        <div class="legal-section" id="children">
+            <h2>12. Children</h2>
+            <p>Our services are not directed at children under 16. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us immediately.</p>
+        </div>
+
+        <div class="legal-section" id="changes">
+            <h2>13. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Material changes will be communicated via email or a prominent notice on our website. We encourage you to review this policy periodically.</p>
+        </div>
+
+        <div class="legal-section" id="contact-us">
+            <h2>14. Contact Us</h2>
+            <div class="contact-box">
+                <h3>Privacy Enquiries</h3>
+                <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:<br><br>
+                <strong>Email:</strong> <a href="mailto:privacy@vittara.co.uk">privacy@vittara.co.uk</a><br>
+                <strong>General:</strong> <a href="mailto:hello@vittara.co.uk">hello@vittara.co.uk</a><br>
+                <strong>Address:</strong> Vittara, Porbandar, Gujarat, India<br><br>
+                For UK GDPR complaints, you may also contact the <strong>Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" target="_blank">ico.org.uk</a> or call <strong>0303 123 1113</strong>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Vittara — Darshik Pratapbhai Fataniya &nbsp;·&nbsp; <a href="index.html">Home</a><a href="terms-of-service.html">Terms</a><a href="cookie-policy.html">Cookies</a><a href="complaints.html">Complaints</a></p>
+</footer>
+
+<script>
+    // Highlight active TOC item on scroll
+    const sections = document.querySelectorAll('.legal-section');
+    const tocLinks = document.querySelectorAll('.toc a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 110) current = s.id; });
+        tocLinks.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints | Vittara Financial Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0A1628;--navy-mid:#112240;--gold:#C9A84C;--gold-light:#E8C97A;--gold-pale:#F5EDD6;--white:#FFFFFF;--off-white:#F8F6F1;--text:#2C2C2C;--text-light:#6B7280;--border:#E5E0D5;}
+        *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+        body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);}
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+        .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+        .logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--navy);}
+        .logo-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:1px;}
+        .logo-sub{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+        .nav-back{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.3s;}
+        .nav-back:hover{color:var(--gold);}
+        .page-hero{background:var(--navy);padding:140px 5% 60px;position:relative;overflow:hidden;}
+        .page-hero::before{content:'';position:absolute;top:-200px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%);border-radius:50%;}
+        .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:16px;}
+        .breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none;}
+        .breadcrumb span{margin:0 8px;}
+        .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,52px);font-weight:900;color:var(--white);margin-bottom:14px;}
+        .page-hero p{color:rgba(255,255,255,0.7);font-size:16px;max-width:600px;line-height:1.6;font-weight:300;}
+
+        /* PROCESS TIMELINE */
+        .process-section{padding:80px 5%;background:var(--off-white);}
+        .section-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+        .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.2;}
+        .section-desc{font-size:16px;color:var(--text-light);line-height:1.7;font-weight:300;max-width:600px;margin-bottom:48px;}
+        .timeline{display:flex;flex-direction:column;gap:0;max-width:700px;}
+        .timeline-item{display:flex;gap:28px;position:relative;}
+        .timeline-item:not(:last-child)::before{content:'';position:absolute;left:27px;top:60px;bottom:-20px;width:2px;background:linear-gradient(var(--gold),rgba(201,168,76,0.2));z-index:0;}
+        .timeline-dot{width:56px;height:56px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);flex-shrink:0;border:3px solid var(--gold-pale);z-index:1;margin-bottom:32px;}
+        .timeline-content{padding-top:8px;padding-bottom:32px;}
+        .timeline-content h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+        .timeline-content p{font-size:14px;color:var(--text-light);line-height:1.7;}
+        .timeline-tag{display:inline-block;background:var(--gold-pale);color:var(--navy);font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.5px;margin-bottom:8px;}
+
+        /* FORM SECTION */
+        .form-section{padding:80px 5%;background:var(--navy);}
+        .form-inner{max-width:720px;margin:0 auto;}
+        .form-inner .section-title{color:var(--white);}
+        .form-inner .section-desc{color:rgba(255,255,255,0.6);margin-bottom:40px;}
+        .complaint-form{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px;}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+        @media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+        .form-group{margin-bottom:20px;}
+        .form-group label{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+        .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 16px;color:var(--white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.3s;}
+        .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.3);}
+        .form-group select option{background:var(--navy);}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+        .form-group textarea{height:140px;resize:none;}
+        .file-upload{border:2px dashed rgba(255,255,255,0.15);border-radius:8px;padding:24px;text-align:center;cursor:pointer;transition:border-color 0.3s;position:relative;}
+        .file-upload:hover{border-color:rgba(201,168,76,0.5);}
+        .file-upload input{position:absolute;inset:0;opacity:0;cursor:pointer;}
+        .file-upload-text{color:rgba(255,255,255,0.5);font-size:14px;}
+        .file-upload-text strong{color:var(--gold);}
+        .char-counter{text-align:right;font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px;}
+        .btn-submit{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;border-radius:8px;padding:16px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:all 0.3s;margin-top:8px;}
+        .btn-submit:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,168,76,0.4);}
+        .form-body.hide{display:none;}
+        .form-success{display:none;text-align:center;padding:40px 0;}
+        .form-success.show{display:block;}
+        .success-icon{width:80px;height:80px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 20px;}
+        .success-title{font-family:'Playfair Display',serif;font-size:26px;color:var(--white);margin-bottom:12px;}
+        .success-msg{color:rgba(255,255,255,0.6);line-height:1.7;font-size:15px;}
+        .ref-number{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:12px 20px;display:inline-block;margin-top:16px;}
+        .ref-number span{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;}
+
+        /* ESCALATION */
+        .escalation-section{padding:80px 5%;background:var(--white);}
+        .esc-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:48px auto 0;}
+        @media(max-width:640px){.esc-grid{grid-template-columns:1fr;}}
+        .esc-card{border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.3s;}
+        .esc-card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(10,22,40,0.07);}
+        .esc-icon{font-size:32px;margin-bottom:16px;}
+        .esc-card h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+        .esc-card p{font-size:14px;color:var(--text-light);line-height:1.6;margin-bottom:12px;}
+        .esc-card a{font-size:14px;color:var(--gold);font-weight:600;text-decoration:none;}
+        .esc-card a:hover{text-decoration:underline;}
+
+        footer{background:var(--navy);padding:40px 5%;text-align:center;}
+        footer p{font-size:13px;color:rgba(255,255,255,0.4);}
+        footer a{color:var(--gold);text-decoration:none;margin:0 8px;}
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="nav-logo">
+        <div class="logo-mark">V</div>
+        <div><div class="logo-name">VITTARA</div><div class="logo-sub">Financial Services</div></div>
+    </a>
+    <a href="index.html" class="nav-back">← Back to Website</a>
+</nav>
+
+<div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Complaints</div>
+    <h1>Complaints Policy</h1>
+    <p>We take every complaint seriously. Our goal is to resolve your concern quickly, fairly, and transparently — every time.</p>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section">
+    <p class="section-label">Our Process</p>
+    <h2 class="section-title">How We Handle Complaints</h2>
+    <p class="section-desc">We follow a clear, structured process to ensure your complaint is handled with the care it deserves.</p>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-content">
+                <span class="timeline-tag">Day 1</span>
+                <h3>Submit Your Complaint</h3>
+                <p>Use the form below, email us at <strong>complaints@vittara.co.uk</strong>, or write to our address. Please include as much detail as possible — what happened, when, and what outcome you're seeking.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-content">
+                <span class="timeline-tag">Within 5 Business Days</span>
+                <h3>Acknowledgement</h3>
+                <p>We will send a written acknowledgement confirming we've received your complaint, along with a reference number and the name of the person handling your case.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-content">
+                <span class="timeline-tag">Within 28 Days</span>
+                <h3>Investigation & Resolution</h3>
+                <p>We'll thoroughly investigate your complaint, reviewing all relevant records and correspondence. We aim to provide a full written response within 28 calendar days. If we need more time, we'll let you know.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-content">
+                <span class="timeline-tag">Final</span>
+                <h3>Final Response & Escalation Rights</h3>
+                <p>If you're not satisfied with our response, you have the right to escalate to an independent body. Our final response letter will include details of your escalation options.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="submit-complaint">
+    <div class="form-inner">
+        <p class="section-label" style="color:var(--gold)">Submit a Complaint</p>
+        <h2 class="section-title" style="color:var(--white)">Tell Us What Went Wrong</h2>
+        <p class="section-desc">All complaints are treated confidentially and handled by our dedicated complaints team.</p>
+
+        <div class="complaint-form">
+            <div class="form-body" id="complaintFormBody">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name *</label>
+                        <input type="text" id="c-fn" placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name *</label>
+                        <input type="text" id="c-ln" placeholder="Smith">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" id="c-email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="c-phone" placeholder="+44 7700 000000">
+                </div>
+                <div class="form-group">
+                    <label>Type of Complaint *</label>
+                    <select id="c-type">
+                        <option value="">Select...</option>
+                        <option>Quality of service</option>
+                        <option>Delayed delivery / missed deadline</option>
+                        <option>Billing or invoice dispute</option>
+                        <option>Communication / responsiveness</option>
+                        <option>Data protection concern</option>
+                        <option>Advice or recommendation</option>
+                        <option>Staff conduct</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Service in Question</label>
+                    <select id="c-service">
+                        <option value="">Select service (if applicable)...</option>
+                        <option>Accounting & Bookkeeping</option>
+                        <option>Tax Preparation & Planning</option>
+                        <option>Paraplanning</option>
+                        <option>Financial Advisory</option>
+                        <option>Business Consulting</option>
+                        <option>General / Website</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date of Incident</label>
+                    <input type="date" id="c-date">
+                </div>
+                <div class="form-group">
+                    <label>Full Description of Complaint *</label>
+                    <textarea id="c-desc" placeholder="Please describe what happened, including any relevant dates, names, and the impact on you…" oninput="updateCharCount(this)"></textarea>
+                    <div class="char-counter"><span id="charCount">0</span>/1000 characters</div>
+                </div>
+                <div class="form-group">
+                    <label>Desired Outcome</label>
+                    <textarea id="c-outcome" placeholder="What resolution are you looking for? (e.g. apology, refund, correction of work…)" style="height:80px;"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Supporting Documents (Optional)</label>
+                    <div class="file-upload">
+                        <input type="file" accept=".pdf,.doc,.docx,.jpg,.png" multiple onchange="updateFiles(this)">
+                        <div class="file-upload-text" id="filesLabel">
+                            <strong>Upload supporting documents</strong><br>
+                            <small style="font-size:12px;color:rgba(255,255,255,0.3);">PDF, DOC, DOCX, JPG, PNG — max 10MB total</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:13px;color:rgba(255,255,255,0.6);cursor:pointer;">
+                        <input type="checkbox" id="c-consent" style="width:18px;height:18px;flex-shrink:0;margin-top:1px;">
+                        I consent to Vittara processing my personal data to investigate and respond to my complaint, in accordance with the <a href="privacy-policy.html" style="color:var(--gold);">Privacy Policy</a>.
+                    </label>
+                </div>
+                <button class="btn-submit" onclick="submitComplaint()">Submit Complaint →</button>
+            </div>
+
+            <div class="form-success" id="complaintSuccess">
+                <div class="success-icon">✓</div>
+                <h3 class="success-title">Complaint Received</h3>
+                <p class="success-msg">Thank you for bringing this to our attention. We've received your complaint and will acknowledge it within 5 business days.</p>
+                <div class="ref-number">Reference: <span id="refNum">VIT-COMP-2025-001</span></div>
+                <p class="success-msg" style="margin-top:16px;font-size:13px;">Please keep this reference number for your records.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ESCALATION -->
+<section class="escalation-section">
+    <div style="text-align:center;margin-bottom:0;">
+        <p class="section-label" style="text-align:center;">If You're Not Satisfied</p>
+        <h2 class="section-title" style="text-align:center;">Escalation Options</h2>
+        <p style="font-size:16px;color:var(--text-light);max-width:560px;margin:0 auto 0;">If you're not satisfied with our final response, you may escalate to an independent body.</p>
+    </div>
+    <div class="esc-grid">
+        <div class="esc-card">
+            <div class="esc-icon">🏛️</div>
+            <h3>Information Commissioner's Office</h3>
+            <p>For complaints relating to data protection or how we've handled your personal information.</p>
+            <a href="https://ico.org.uk/make-a-complaint/" target="_blank">ico.org.uk/make-a-complaint →</a><br>
+            <a href="tel:03031231113" style="margin-top:6px;display:block;">📞 0303 123 1113</a>
+        </div>
+        <div class="esc-card">
+            <div class="esc-icon">⚖️</div>
+            <h3>Financial Ombudsman Service</h3>
+            <p>For unresolved disputes related to financial advice or regulated financial activities (where applicable).</p>
+            <a href="https://www.financial-ombudsman.org.uk" target="_blank">financial-ombudsman.org.uk →</a><br>
+            <a href="tel:08000234567" style="margin-top:6px;display:block;">📞 0800 023 4567</a>
+        </div>
+        <div class="esc-card">
+            <div class="esc-icon">📋</div>
+            <h3>Institute of Chartered Accountants</h3>
+            <p>For complaints about professional conduct relating to accounting or tax services (where applicable).</p>
+            <a href="https://www.icaew.com" target="_blank">icaew.com →</a>
+        </div>
+        <div class="esc-card">
+            <div class="esc-icon">🤝</div>
+            <h3>Alternative Dispute Resolution</h3>
+            <p>We're committed to resolving disputes fairly. If needed, we're open to engaging a neutral ADR mediator.</p>
+            <a href="mailto:complaints@vittara.co.uk">Request ADR process →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Vittara — Darshik Pratapbhai Fataniya &nbsp;·&nbsp; <a href="index.html">Home</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a><a href="cookie-policy.html">Cookies</a></p>
+</footer>
+
+<script>
+    function updateCharCount(el) {
+        document.getElementById('charCount').textContent = el.value.length;
+    }
+    function updateFiles(input) {
+        const label = document.getElementById('filesLabel');
+        if (input.files.length > 0) {
+            label.innerHTML = `<strong style="color:var(--gold)">✓ ${input.files.length} file(s) selected</strong>`;
+        }
+    }
+    function submitComplaint() {
+        const required = ['c-fn','c-ln','c-email','c-type','c-desc'];
+        let valid = true;
+        required.forEach(id => {
+            const el = document.getElementById(id);
+            if (!el.value.trim()) { el.style.borderColor = '#ef4444'; valid = false; }
+            else el.style.borderColor = '';
+        });
+        const consent = document.getElementById('c-consent');
+        if (!consent.checked) { alert('Please consent to data processing to submit your complaint.'); return; }
+        if (!valid) { alert('Please fill in all required fields.'); return; }
+
+        // Generate reference number
+        const ref = 'VIT-COMP-' + new Date().getFullYear() + '-' + String(Math.floor(Math.random() * 900) + 100);
+        document.getElementById('refNum').textContent = ref;
+
+        document.getElementById('complaintFormBody').classList.add('hide');
+        document.getElementById('complaintSuccess').classList.add('show');
+        window.scrollTo({ top: document.getElementById('submit-complaint').offsetTop - 80, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

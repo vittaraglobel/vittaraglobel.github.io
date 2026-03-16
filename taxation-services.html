@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Tax Services | Vittara - Maximize Your Tax Savings</title>
+    <meta name="description" content="Expert tax planning & compliance services for UK individuals & businesses. Corporation tax, income tax, estate planning & reliefs. Save thousands in taxes legally.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0A1628;
+            --navy-mid: #112240;
+            --gold: #C9A84C;
+            --gold-light: #E8C97A;
+            --gold-pale: #F5EDD6;
+            --white: #FFFFFF;
+            --off-white: #F8F6F1;
+            --text: #2C2C2C;
+            --text-light: #6B7280;
+            --border: #E5E0D5;
+            --green: #10B981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-mark {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: var(--navy);
+            font-size: 20px;
+        }
+
+        .logo-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--navy);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(201, 168, 76, 0.3);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            padding: 100px 5% 80px;
+            margin-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--navy);
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(201, 168, 76, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            padding: 14px 32px;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 36px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--gold);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .pricing-card {
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            background: var(--white);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold);
+            background: var(--gold-pale);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:not(.featured):hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(201, 168, 76, 0.15);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pricing-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .pricing-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            min-height: 40px;
+        }
+
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .price-period {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 32px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 32px;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .pricing-card .btn-primary {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--navy);
+            flex-shrink: 0;
+        }
+
+        .benefit-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .benefit-content p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-color: var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .author-title {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            margin: 16px 0 32px;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .btn-primary {
+            position: relative;
+            z-index: 2;
+        }
+
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+            h2 { font-size: 28px; }
+            .hero h1 { font-size: 32px; }
+            .cta-group { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; }
+            .pricing-card.featured { transform: scale(1); }
+            .cta-section { padding: 40px 20px; }
+            .services-grid, .benefits-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <div class="logo-mark">V</div>
+        <div class="logo-text">
+            <div class="logo-name">VITTARA</div>
+            <div class="logo-sub">Financial Services</div>
+        </div>
+    </a>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-tag">Tax Services</span>
+            <h1>Strategic Tax Planning & Compliance That Saves You Money</h1>
+            <p>Minimize your tax burden legally. Our expert tax strategists identify reliefs, optimize your structure, and ensure complete HMRC compliance. Save thousands every year.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Get Free Tax Review</a>
+                <a href="#pricing" class="btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>Comprehensive Tax Services</h2>
+        <p class="section-subtitle">Expert tax solutions for individuals and businesses, from annual compliance to strategic long-term planning</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Corporation Tax</h3>
+                <p>Efficient corporation tax planning and returns for UK limited companies. We maximize available reliefs and optimize your tax position year after year.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">👤</div>
+                <h3>Personal Tax Returns</h3>
+                <p>Comprehensive self-assessment returns with strategic tax minimization. From freelancers to high-net-worth individuals, we handle all complexities.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Business Tax Strategy</h3>
+                <p>Proactive tax planning to optimize your business structure. We identify opportunities for corporation tax relief, dividends optimization, and expense maximization.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Capital Gains Planning</h3>
+                <p>Strategic management of property and investment gains. We utilize available exemptions, losses, and reliefs to minimize your CGT liability.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>Estate & Inheritance Tax</h3>
+                <p>Comprehensive IHT planning to protect your legacy. We structure your assets to minimize inheritance tax and maximize what you pass to loved ones.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>HMRC Compliance</h3>
+                <p>Complete compliance management with HMRC. From submitting returns on time to handling inquiries, we handle all regulatory requirements professionally.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container">
+        <h2>Tax Service Pricing</h2>
+        <div class="pricing-intro">
+            <p class="section-subtitle">Fixed-fee tax services for complete transparency and peace of mind. Most clients save 3-5x the service cost in tax optimization.</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Individual Returns</h3>
+                <p class="pricing-desc">Self-employed & employed individuals</p>
+                <div class="price">£180</div>
+                <div class="price-period">per year</div>
+                <ul class="pricing-features">
+                    <li>Complete self-assessment return</li>
+                    <li>Tax relief optimization</li>
+                    <li>Expense documentation review</li>
+                    <li>Annual tax summary report</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="badge">Best Value</div>
+                <h3>Business Tax Planning</h3>
+                <p class="pricing-desc">Limited companies and partnerships</p>
+                <div class="price">£450</div>
+                <div class="price-period">per year</div>
+                <ul class="pricing-features">
+                    <li>Corporation tax strategy</li>
+                    <li>Dividend planning optimization</li>
+                    <li>Capital allowances review</li>
+                    <li>Quarterly tax planning calls</li>
+                    <li>R&D relief identification</li>
+                    <li>Full tax return preparation</li>
+                    <li>HMRC correspondence support</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Premium Tax Advisory</h3>
+                <p class="pricing-desc">High-net-worth & complex situations</p>
+                <div class="price">Custom</div>
+                <div class="price-period">contact us</div>
+                <ul class="pricing-features">
+                    <li>Comprehensive tax audit</li>
+                    <li>Multi-year planning strategy</li>
+                    <li>Investment tax optimization</li>
+                    <li>International tax advice</li>
+                    <li>Estate planning integration</li>
+                    <li>Director-level consultations</li>
+                    <li>Dedicated tax advisor</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Schedule Call</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Why Vittara for Your Taxes</h2>
+        <p class="section-subtitle">Expert tax strategists committed to maximizing your financial position while ensuring complete HMRC compliance</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Average Savings: £4,200</h3>
+                    <p>Our clients save an average of £4,200 per year through strategic tax planning and relief identification.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>HMRC Approved</h3>
+                    <p>Full compliance with HMRC requirements. Zero disputes, zero penalties, complete peace of mind.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Proactive Planning</h3>
+                    <p>We don't just react. We plan ahead to identify opportunities and mitigate risks year-round.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Latest Tax Knowledge</h3>
+                    <p>Always updated on tax law changes, new reliefs, and planning opportunities affecting your situation.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Transparent Reporting</h3>
+                    <p>Detailed breakdown of your tax position, savings achieved, and recommendations for next year.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>24-Hour Support</h3>
+                    <p>Quick response to queries, HMRC correspondence handling, and expert guidance when you need it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2>Client Success Stories</h2>
+        <p class="section-subtitle">Real results from real clients who trusted us with their tax strategy</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Vittara saved us £12,500 in the first year through efficient dividend planning and reliefs we didn't know we qualified for. Incredible value for the service."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PM</div>
+                    <div class="author-info">
+                        <div class="author-name">Paul Mitchell</div>
+                        <div class="author-title">Director, Tech Company</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a property investor, I was paying way too much tax. Their capital gains planning strategies cut my liability by nearly 40%. Finally someone who understands property tax!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AM</div>
+                    <div class="author-info">
+                        <div class="author-name">Amanda Mitchell</div>
+                        <div class="author-title">Property Investor</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Professional, knowledgeable, and genuinely interested in optimizing my tax position. They've completely transformed how I manage my finances as a freelancer."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">DK</div>
+                    <div class="author-info">
+                        <div class="author-name">David Kim</div>
+                        <div class="author-title">Freelance Consultant</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Handled our complex multi-company tax situation flawlessly. The strategic advice saved us thousands and gave us confidence in our tax position."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RG</div>
+                    <div class="author-info">
+                        <div class="author-name">Robert Grant</div>
+                        <div class="author-title">Group Finance Director</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Outstanding knowledge of inheritance tax planning. Their advice helped us structure our estate to save our family over £80,000 in IHT."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">CJ</div>
+                    <div class="author-info">
+                        <div class="author-name">Catherine Johnson</div>
+                        <div class="author-title">Business Owner</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I was dreading tax season until I met Vittara. Now I look forward to our annual review knowing my taxes are optimized and compliant."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">TB</div>
+                    <div class="author-info">
+                        <div class="author-name">Thomas Brown</div>
+                        <div class="author-title">Partnership Owner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="cta-section">
+            <h2>Start Saving on Your Taxes Today</h2>
+            <p>Get a free tax review and discover how much you could save. No obligation, no hidden costs—just expert advice tailored to your situation.</p>
+            <a href="mailto:hello@vittara.co.uk?subject=Tax Services Inquiry" class="btn-primary">Request Free Tax Review</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Vittara Financial Services. All rights reserved.</p>
+        <p>Founded by Darshik Pratapbhai Fataniya | Expert tax services for UK businesses & individuals</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
