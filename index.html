@@ -2902,7 +2902,7 @@
             <h2 class="modal-title">Book a Consultation</h2>
             <p class="modal-sub">Free 30-minute discovery call with our team.</p>
             <form action="https://formspree.io/f/xaqppadw" method="POST">
-            <div class="form-row">
+            <form id="bookingForm">
                 <div class="form-group">
                     <label>First Name *</label>
                     <input type="text" id="book-fname" name="fname" placeholder="John">
@@ -3158,7 +3158,22 @@
         tomorrow.setDate(tomorrow.getDate() + 1);
         dateInput.min = tomorrow.toISOString().split('T')[0];
     }
-
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    try {
+        await fetch('https://formspree.io/f/xaqppadw', {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+        document.querySelector('.modal-form-body').classList.add('hide');
+        document.getElementById('bookingSuccess').classList.add('show');
+        this.reset();
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
 </script>
 </body>
 </html>
