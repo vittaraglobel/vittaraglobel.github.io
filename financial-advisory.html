@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advisory Services | Vittara - Wealth & Retirement Planning</title>
+    <meta name="description" content="Independent financial advisory services for wealth building, retirement planning, investment strategy & estate planning. Personalized advice for UK individuals and families.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0A1628;
+            --navy-mid: #112240;
+            --gold: #C9A84C;
+            --gold-light: #E8C97A;
+            --gold-pale: #F5EDD6;
+            --white: #FFFFFF;
+            --off-white: #F8F6F1;
+            --text: #2C2C2C;
+            --text-light: #6B7280;
+            --border: #E5E0D5;
+            --green: #10B981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-mark {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: var(--navy);
+            font-size: 20px;
+        }
+
+        .logo-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--navy);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(201, 168, 76, 0.3);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            padding: 100px 5% 80px;
+            margin-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--navy);
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(201, 168, 76, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            padding: 14px 32px;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 36px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--gold);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .pricing-card {
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            background: var(--white);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold);
+            background: var(--gold-pale);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:not(.featured):hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(201, 168, 76, 0.15);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pricing-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .pricing-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            min-height: 40px;
+        }
+
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .price-period {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 32px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 32px;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .pricing-card .btn-primary {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--navy);
+            flex-shrink: 0;
+        }
+
+        .benefit-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .benefit-content p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-color: var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .author-title {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            margin: 16px 0 32px;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .btn-primary {
+            position: relative;
+            z-index: 2;
+        }
+
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+            h2 { font-size: 28px; }
+            .hero h1 { font-size: 32px; }
+            .cta-group { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; }
+            .pricing-card.featured { transform: scale(1); }
+            .cta-section { padding: 40px 20px; }
+            .services-grid, .benefits-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <div class="logo-mark">V</div>
+        <div class="logo-text">
+            <div class="logo-name">VITTARA</div>
+            <div class="logo-sub">Financial Services</div>
+        </div>
+    </a>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-tag">Financial Advisory</span>
+            <h1>Personalized Financial Advice for Your Wealth & Future</h1>
+            <p>Expert guidance on investments, retirement planning, and wealth building. Build a secure financial future with strategies tailored to your goals and lifestyle.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Book Initial Consultation</a>
+                <a href="#pricing" class="btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>Financial Advisory Services</h2>
+        <p class="section-subtitle">Comprehensive financial guidance covering all aspects of your wealth, from today's decisions to your retirement and legacy</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>Investment Strategy & Management</h3>
+                <p>Personalized investment portfolio design, asset allocation optimization, and ongoing portfolio management aligned with your risk tolerance and goals.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Retirement Planning</h3>
+                <p>Comprehensive retirement income projections, pension optimization, drawdown strategy, and lifestyle planning to retire with confidence.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Protection & Insurance Strategy</h3>
+                <p>Life insurance needs analysis, disability protection, income protection planning, and critical illness coverage to safeguard your family's financial security.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Property & Mortgage Planning</h3>
+                <p>Strategic property investment advice, mortgage optimization, remortgage strategy, and property portfolio management for wealth building.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Wealth Accumulation & Growth</h3>
+                <p>Tax-efficient investment strategies, ISA optimization, bond investments, and diversified wealth building approaches tailored to your circumstances.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">👨‍👩‍👧‍👦</div>
+                <h3>Estate & Legacy Planning</h3>
+                <p>Will planning guidance, inheritance tax mitigation, family wealth succession strategies, and ensuring your legacy is protected for future generations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container">
+        <h2>Financial Advisory Pricing</h2>
+        <div class="pricing-intro">
+            <p class="section-subtitle">Flexible advisory options based on your needs and assets. All services include comprehensive financial planning and ongoing support.</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Initial Consultation</h3>
+                <p class="pricing-desc">Explore your financial situation</p>
+                <div class="price">£180</div>
+                <div class="price-period">one-time fee</div>
+                <ul class="pricing-features">
+                    <li>60-minute consultation</li>
+                    <li>Financial needs assessment</li>
+                    <li>Initial recommendations</li>
+                    <li>No obligation to proceed</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Book Now</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="badge">Most Popular</div>
+                <h3>Comprehensive Planning</h3>
+                <p class="pricing-desc">Full financial planning service</p>
+                <div class="price">£1,800</div>
+                <div class="price-period">one-time plan</div>
+                <ul class="pricing-features">
+                    <li>Detailed financial plan</li>
+                    <li>Investment recommendations</li>
+                    <li>Retirement projections</li>
+                    <li>Tax optimization strategy</li>
+                    <li>Protection review</li>
+                    <li>Estate planning advice</li>
+                    <li>Annual review included</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Ongoing Advisory</h3>
+                <p class="pricing-desc">Continuous wealth management</p>
+                <div class="price">0.75%</div>
+                <div class="price-period">of assets p.a.</div>
+                <ul class="pricing-features">
+                    <li>Ongoing portfolio management</li>
+                    <li>Quarterly review meetings</li>
+                    <li>Tax-efficient rebalancing</li>
+                    <li>Strategy adjustments</li>
+                    <li>Insurance reviews</li>
+                    <li>Unlimited consultations</li>
+                    <li>Dedicated advisor</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Why Choose Vittara Financial Advisory</h2>
+        <p class="section-subtitle">Independent financial advisors committed to putting your interests first and delivering exceptional results</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Independent Advisors</h3>
+                    <p>We're not tied to any financial institutions. Our advice is truly impartial and based solely on what's best for you.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Holistic Approach</h3>
+                    <p>We look at your complete financial picture—investments, protection, tax, property, and estate—to create integrated strategies.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Transparent Fees</h3>
+                    <p>Clear, upfront pricing with no hidden charges. You always know exactly what you're paying and what you're getting.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>FCA Regulated</h3>
+                    <p>Full FCA regulation and authorization ensuring the highest standards of professionalism, competence, and consumer protection.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Personal Relationships</h3>
+                    <p>You'll work with a dedicated advisor who knows your situation intimately and understands your goals and concerns.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Regular Reviews</h3>
+                    <p>Your circumstances change. We review regularly to ensure your strategy remains aligned with your evolving goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2>Client Testimonials</h2>
+        <p class="section-subtitle">Real clients sharing their experiences and financial successes with Vittara</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Transformed my financial future. They created a comprehensive plan that's helped me understand my finances and feel confident about retirement. Exceptional service."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AF</div>
+                    <div class="author-info">
+                        <div class="author-name">Andrew Foster</div>
+                        <div class="author-title">Retired Professional</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a business owner, I needed someone to help me transition wealth properly. Their estate planning advice has given me peace of mind knowing my family is protected."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">CD</div>
+                    <div class="author-info">
+                        <div class="author-name">Christine Davies</div>
+                        <div class="author-title">Business Owner</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Investment portfolio has outperformed my expectations. They explain everything clearly and make me feel involved in decisions. Genuinely care about my success."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">TB</div>
+                    <div class="author-info">
+                        <div class="author-name">Thomas Bradley</div>
+                        <div class="author-title">Senior Executive</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"They helped me navigate a complex inheritance situation and optimize it tax-efficiently. Their expertise in estate planning is outstanding and saved our family significantly."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">LM</div>
+                    <div class="author-info">
+                        <div class="author-name">Louise Mitchell</div>
+                        <div class="author-title">Inheritance Planning</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Finally have a retirement plan I'm confident in. They've taken all the worry out of retirement planning. Regular reviews keep me on track toward my goals."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">GW</div>
+                    <div class="author-info">
+                        <div class="author-name">Graham Wilson</div>
+                        <div class="author-title">Approaching Retirement</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Professional, knowledgeable, and genuinely interested in my success. They've restructured my portfolio and identified tax savings I didn't know existed. Highly recommended."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JL</div>
+                    <div class="author-info">
+                        <div class="author-name">Jennifer Lopez</div>
+                        <div class="author-title">Property Investor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="cta-section">
+            <h2>Let's Build Your Financial Future Together</h2>
+            <p>Schedule a free initial consultation with one of our financial advisors. We'll listen to your goals, assess your situation, and show you how we can help you achieve financial security.</p>
+            <a href="/cdn-cgi/l/email-protection#741c1118181b34021d00001506155a171b5a011f4b0701161e11170049321d1a151a171d1518543510021d071b060d543d1a05011d060d" class="btn-primary">Book Your Consultation</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Vittara Financial Services. All rights reserved.</p>
+        <p>Founded by Darshik Pratapbhai Fataniya | Independent financial advisory for UK individuals & families</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a> | <a
+<script src="cookie-consent.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+</html>

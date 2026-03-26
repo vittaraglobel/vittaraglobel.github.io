@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | Vittara Financial Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0A1628;--gold:#C9A84C;--gold-light:#E8C97A;--gold-pale:#F5EDD6;--white:#FFFFFF;--off-white:#F8F6F1;--text:#2C2C2C;--text-light:#6B7280;--border:#E5E0D5;}
+        *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+        body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+        .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+        .logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--navy);}
+        .logo-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:1px;}
+        .logo-sub{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+        .nav-back{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.3s;}
+        .nav-back:hover{color:var(--gold);}
+        .page-hero{background:var(--navy);padding:140px 5% 60px;}
+        .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:16px;}
+        .breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none;}
+        .breadcrumb span{margin:0 8px;}
+        .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,52px);font-weight:900;color:var(--white);margin-bottom:14px;}
+        .page-hero p{color:rgba(255,255,255,0.5);font-size:14px;}
+        .content-wrap{max-width:800px;margin:0 auto;padding:60px 5%;}
+        .legal-meta{background:var(--gold-pale);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 18px;font-size:13px;color:var(--navy);margin-bottom:36px;line-height:1.5;}
+        .legal-section{margin-bottom:40px;}
+        .legal-section h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--gold-pale);}
+        .legal-section p{font-size:15px;color:var(--text);line-height:1.8;margin-bottom:14px;}
+        .legal-section ul{margin:0 0 14px 20px;}
+        .legal-section li{font-size:15px;color:var(--text);line-height:1.8;margin-bottom:6px;}
+
+        /* COOKIE TABLE */
+        .cookie-table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+        .cookie-table th{background:var(--navy);color:var(--white);padding:12px 16px;text-align:left;font-size:13px;font-weight:600;letter-spacing:0.5px;}
+        .cookie-table td{padding:12px 16px;font-size:14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
+        .cookie-table tr:last-child td{border-bottom:none;}
+        .cookie-table tr:nth-child(even){background:var(--off-white);}
+        .cookie-type{display:inline-block;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:0.5px;}
+        .type-essential{background:#d1fae5;color:#065f46;}
+        .type-analytics{background:#dbeafe;color:#1e40af;}
+        .type-marketing{background:#fef3c7;color:#92400e;}
+        .type-functional{background:var(--gold-pale);color:var(--navy);}
+
+        /* COOKIE CONSENT BANNER PREVIEW */
+        .banner-preview{background:var(--navy);border-radius:16px;padding:28px;margin:24px 0;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;}
+        .banner-preview-text h4{font-family:'Playfair Display',serif;font-size:16px;color:var(--white);margin-bottom:8px;}
+        .banner-preview-text p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;}
+        .banner-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+        .btn-accept-all{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;padding:10px 20px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+        .btn-manage{background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;}
+        .btn-reject{background:none;color:rgba(255,255,255,0.5);border:none;padding:10px 16px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;text-decoration:underline;}
+        .preview-label{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+
+        /* PREFERENCES */
+        .cookie-toggle-row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--border);}
+        .cookie-toggle-row:last-child{border-bottom:none;}
+        .cookie-toggle-label{font-size:15px;font-weight:600;color:var(--navy);}
+        .cookie-toggle-desc{font-size:13px;color:var(--text-light);margin-top:2px;}
+        .toggle{position:relative;width:48px;height:26px;flex-shrink:0;}
+        .toggle input{opacity:0;width:0;height:0;}
+        .toggle-slider{position:absolute;inset:0;background:#ddd;border-radius:26px;cursor:pointer;transition:0.3s;}
+        .toggle-slider::before{content:'';position:absolute;width:20px;height:20px;left:3px;bottom:3px;background:white;border-radius:50%;transition:0.3s;}
+        .toggle input:checked+.toggle-slider{background:var(--gold);}
+        .toggle input:checked+.toggle-slider::before{transform:translateX(22px);}
+        .toggle input:disabled+.toggle-slider{background:var(--gold);opacity:0.7;cursor:not-allowed;}
+        .prefs-panel{background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:24px;margin:24px 0;}
+        .prefs-panel h4{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:16px;}
+        .save-prefs-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;padding:12px 28px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:16px;transition:all 0.3s;}
+        .save-prefs-btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(201,168,76,0.3);}
+
+        .contact-box{background:var(--navy);border-radius:16px;padding:28px;color:var(--white);margin-top:40px;}
+        .contact-box h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);margin-bottom:10px;}
+        .contact-box p{color:rgba(255,255,255,0.7);font-size:14px;line-height:1.6;}
+        .contact-box a{color:var(--gold);text-decoration:none;}
+        footer{background:var(--navy);padding:40px 5%;text-align:center;}
+        footer p{font-size:13px;color:rgba(255,255,255,0.4);}
+        footer a{color:var(--gold);text-decoration:none;margin:0 8px;}
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="nav-logo">
+        <div class="logo-mark">V</div>
+        <div><div class="logo-name">VITTARA</div><div class="logo-sub">Financial Services</div></div>
+    </a>
+    <a href="index.html" class="nav-back">← Back to Website</a>
+</nav>
+
+<div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Cookie Policy</div>
+    <h1>Cookie Policy</h1>
+    <p>Last updated: 1 January 2025</p>
+</div>
+
+<div class="content-wrap">
+    <div class="legal-meta">
+        <strong>In plain English:</strong> We use cookies to make our website work properly, understand how visitors use it, and occasionally show relevant content. You're in control — you can manage your preferences below.
+    </div>
+
+    <div class="legal-section">
+        <h2>What Are Cookies?</h2>
+        <p>Cookies are small text files placed on your device when you visit a website. They help websites remember your preferences, keep you logged in, and understand how people use the site.</p>
+        <p>Some cookies are essential for the website to function; others are optional and require your consent under UK law (PECR and UK GDPR).</p>
+    </div>
+
+    <div class="legal-section">
+        <h2>How We Use Cookies</h2>
+        <p>We use cookies for the following purposes:</p>
+        <table class="cookie-table">
+            <thead><tr><th>Cookie Name</th><th>Type</th><th>Purpose</th><th>Duration</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>vittara_session</strong></td>
+                    <td><span class="cookie-type type-essential">Essential</span></td>
+                    <td>Maintains your session and portal login state</td>
+                    <td>Session</td>
+                </tr>
+                <tr>
+                    <td><strong>vittara_consent</strong></td>
+                    <td><span class="cookie-type type-essential">Essential</span></td>
+                    <td>Stores your cookie consent preferences</td>
+                    <td>12 months</td>
+                </tr>
+                <tr>
+                    <td><strong>vittara_csrf</strong></td>
+                    <td><span class="cookie-type type-essential">Essential</span></td>
+                    <td>Security token to prevent cross-site request forgery</td>
+                    <td>Session</td>
+                </tr>
+                <tr>
+                    <td><strong>_ga, _gid</strong></td>
+                    <td><span class="cookie-type type-analytics">Analytics</span></td>
+                    <td>Google Analytics — helps us understand visitor behaviour anonymously</td>
+                    <td>2 years / 24h</td>
+                </tr>
+                <tr>
+                    <td><strong>_gat</strong></td>
+                    <td><span class="cookie-type type-analytics">Analytics</span></td>
+                    <td>Google Analytics — throttles request rate</td>
+                    <td>1 minute</td>
+                </tr>
+                <tr>
+                    <td><strong>vittara_prefs</strong></td>
+                    <td><span class="cookie-type type-functional">Functional</span></td>
+                    <td>Remembers your language or display preferences</td>
+                    <td>6 months</td>
+                </tr>
+                <tr>
+                    <td><strong>li_sugr, bcookie</strong></td>
+                    <td><span class="cookie-type type-marketing">Marketing</span></td>
+                    <td>LinkedIn — used for LinkedIn advertising and insights (optional)</td>
+                    <td>3 months</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="legal-section">
+        <h2>Cookie Banner Preview</h2>
+        <p>When you first visit our site, you'll see a consent banner. Here's what it looks like:</p>
+        <div class="banner-preview">
+            <div style="flex:1;min-width:240px;">
+                <div class="banner-preview-text">
+                    <h4>🍪 We use cookies</h4>
+                    <p>We use essential cookies to make our site work. With your consent, we'd also like to use analytics and marketing cookies to improve your experience and help us reach more UK businesses who could benefit from our services.</p>
+                </div>
+                <div class="banner-btns">
+                    <button class="btn-accept-all" onclick="this.textContent='✓ Accepted!'">Accept All</button>
+                    <button class="btn-manage" onclick="document.getElementById('cookie-prefs').scrollIntoView({behavior:'smooth'})">Manage</button>
+                    <button class="btn-reject" onclick="this.textContent='✓ Rejected'">Reject Optional</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legal-section" id="cookie-prefs">
+        <h2>Manage Your Preferences</h2>
+        <p>You can update your cookie preferences at any time:</p>
+        <div class="prefs-panel">
+            <h4>Cookie Settings</h4>
+            <div class="cookie-toggle-row">
+                <div>
+                    <div class="cookie-toggle-label">Essential Cookies</div>
+                    <div class="cookie-toggle-desc">Required for the website to function. Cannot be disabled.</div>
+                </div>
+                <label class="toggle"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+            </div>
+            <div class="cookie-toggle-row">
+                <div>
+                    <div class="cookie-toggle-label">Analytics Cookies</div>
+                    <div class="cookie-toggle-desc">Help us understand how visitors use our website (Google Analytics).</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="toggle-analytics" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="cookie-toggle-row">
+                <div>
+                    <div class="cookie-toggle-label">Functional Cookies</div>
+                    <div class="cookie-toggle-desc">Remember your preferences for a better experience.</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="toggle-functional" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="cookie-toggle-row">
+                <div>
+                    <div class="cookie-toggle-label">Marketing Cookies</div>
+                    <div class="cookie-toggle-desc">Used to show relevant ads and track campaign performance.</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="toggle-marketing"><span class="toggle-slider"></span></label>
+            </div>
+            <button class="save-prefs-btn" onclick="savePrefs()">Save Preferences</button>
+        </div>
+    </div>
+
+    <div class="legal-section">
+        <h2>Blocking Cookies via Your Browser</h2>
+        <p>You can also control cookies through your browser settings. Here's how:</p>
+        <ul>
+            <li><strong>Google Chrome:</strong> Settings → Privacy and Security → Cookies and other site data</li>
+            <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data</li>
+            <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+            <li><strong>Edge:</strong> Settings → Cookies and site permissions</li>
+        </ul>
+        <p>Note that blocking all cookies may affect the functionality of our website and client portal.</p>
+    </div>
+
+    <div class="legal-section">
+        <h2>Third-Party Cookies</h2>
+        <p>Some cookies are set by third-party services we use. These include:</p>
+        <ul>
+            <li><strong>Google Analytics</strong> — visitor behaviour analysis (<a href="https://policies.google.com/privacy" target="_blank" style="color:var(--gold);">Google Privacy Policy</a>)</li>
+            <li><strong>LinkedIn Insight Tag</strong> — professional audience insights (optional)</li>
+            <li><strong>Google Fonts</strong> — typography delivery (no personal data retained)</li>
+        </ul>
+    </div>
+
+    <div class="contact-box">
+        <h3>Cookie Questions</h3>
+        <p>For any questions about our use of cookies, contact us at:<br><br>
+        <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#f8888a918e999b81b88e918c8c998a99d69b97d68d93"><span class="__cf_email__" data-cfemail="2a5a58435c4b49536a5c435e5e4b584b044945045f41">[email&#160;protected]</span></a><br>
+        For broader privacy concerns, see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Vittara — Darshik Pratapbhai Fataniya &nbsp;·&nbsp; <a href="index.html">Home</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a><a href="complaints.html">Complaints</a></p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    function savePrefs() {
+        const btn = document.querySelector('.save-prefs-btn');
+        btn.t
+<script src="cookie-consent.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+</html>

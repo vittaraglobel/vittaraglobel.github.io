@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Consulting & Compliance | Vittara – UK Business Advisers</title>
+<meta name="description" content="Expert business consulting and compliance services for UK, Australian, and UAE businesses. Company formation, regulatory compliance, business planning — from £249/month.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1628;--navy-mid:#112240;--gold:#C9A84C;--gold-light:#E8C97A;--gold-pale:#F5EDD6;--white:#FFFFFF;--off-white:#F8F6F1;--text:#2C2C2C;--text-light:#6B7280;--border:#E5E0D5;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:"DM Sans",sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-weight:900;font-size:20px;color:var(--navy);}.logo-text{display:flex;flex-direction:column;}.logo-name{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:1px;}.logo-sub{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+.nav-links{display:flex;list-style:none;gap:36px;align-items:center;}.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s;}.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy)!important;padding:10px 22px;border-radius:6px;font-weight:600!important;}
+.nav-mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;}
+@media(max-width:860px){.nav-mobile-toggle{display:flex;}.nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,22,40,.98);flex-direction:column;padding:24px 5%;gap:8px;border-bottom:1px solid rgba(201,168,76,.2);}.nav-links.open{display:flex;}.nav-links li{width:100%;}.nav-links a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);}.nav-cta{text-align:center;margin-top:8px;}}
+.breadcrumb{padding:20px 5%;background:var(--off-white);border-bottom:1px solid var(--border);font-size:13px;color:var(--text-light);margin-top:72px;}.breadcrumb a{color:var(--text-light);text-decoration:none;}.breadcrumb a:hover{color:var(--gold);}.breadcrumb span{margin:0 8px;}
+.page-hero{padding:80px 5% 72px;background:var(--navy);position:relative;overflow:hidden;}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 50%,rgba(201,168,76,.08) 0%,transparent 60%);}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px;}
+.hero-inner{position:relative;z-index:2;max-width:760px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:8px 18px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+.hero-badge::before{content:"";width:6px;height:6px;background:var(--gold);border-radius:50%;}
+.page-hero h1{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,60px);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:20px;}
+.page-hero h1 span{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.page-hero p{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;max-width:580px;margin-bottom:32px;font-weight:300;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:15px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,168,76,.4);}
+.btn-outline-w{background:transparent;color:var(--white);padding:13px 30px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.3);cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline-w:hover{border-color:var(--gold);color:var(--gold);}
+.btn-navy{background:var(--navy);color:var(--white);padding:15px 36px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-navy:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(10,22,40,.3);}
+.section-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.section-title{font-family:"Playfair Display",serif;font-size:clamp(26px,4vw,42px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:16px;}
+.section-desc{font-size:16px;color:var(--text-light);line-height:1.7;font-weight:300;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px;}
+.card{border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;background:var(--white);}
+.card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(10,22,40,.08);}
+.card-icon{font-size:28px;margin-bottom:14px;}
+.card h3{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.card p{font-size:13px;color:var(--text-light);line-height:1.6;}
+.card-price{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--gold);margin-top:12px;}
+.card-price small{font-size:12px;color:var(--text-light);font-family:"DM Sans",sans-serif;font-weight:400;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:48px;}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;transition:all .3s;}
+.why-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.3);transform:translateY(-4px);}
+.why-icon{font-size:26px;margin-bottom:14px;}
+.why-card h3{font-family:"Playfair Display",serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px;}
+.why-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;}
+.cta-banner{padding:80px 5%;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);text-align:center;}
+.cta-banner h2{font-family:"Playfair Display",serif;font-size:34px;font-weight:700;color:var(--navy);margin-bottom:12px;}
+.cta-banner p{font-size:16px;color:rgba(10,22,40,.7);margin-bottom:32px;}
+footer{background:#060E1C;padding:60px 5% 30px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;margin-top:16px;max-width:280px;}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .3s;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3);}
+.social-links{display:flex;gap:12px;}.social-link{width:36px;height:36px;background:rgba(255,255,255,.06);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;font-size:14px;transition:all .3s;}.social-link:hover{background:rgba(201,168,76,.2);color:var(--gold);}
+.modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;}.modal.active{display:flex;}
+.modal-content{background:var(--white);border-radius:20px;padding:36px;width:90%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;animation:mIn .3s ease;}
+@keyframes mIn{from{opacity:0;transform:scale(.95) translateY(20px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.modal-close{position:absolute;top:20px;right:20px;width:36px;height:36px;background:var(--off-white);border:none;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-light);}
+.modal-title{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;}.modal-sub{font-size:14px;color:var(--text-light);margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}.form-group{margin-bottom:14px;}
+.form-group label{display:block;font-size:11px;font-weight:600;color:var(--text-light);letter-spacing:.8px;text-transform:uppercase;margin-bottom:5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--off-white);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:9px 12px;font-size:14px;font-family:"DM Sans",sans-serif;outline:none;transition:border-color .3s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+.sticky-cta{position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.sticky-chat{width:52px;height:52px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;box-shadow:0 8px 24px rgba(201,168,76,.4);transition:all .3s;border:none;text-decoration:none;}
+.sticky-chat:hover{transform:scale(1.1);}.sticky-label{background:var(--navy);color:var(--white);font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none;}.sticky-cta:hover .sticky-label{opacity:1;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="logo-mark">V</div><div class="logo-text"><span class="logo-name">VITTARA</span><span class="logo-sub">Financial Services</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li><a href="our-story.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="resources.html">Insights</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cta" onclick="openModal();return false;">Book Consultation</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="index.html#services">Services</a><span>›</span> Business Consulting & Compliance</div>
+
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Service · From £249/month</div>
+    <h1>Business Consulting<br>&amp; <span>Compliance</span></h1>
+    <p>Strategic business advice and regulatory compliance for UK, Australian, and UAE businesses — from company formation to director responsibilities and financial due diligence.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary" onclick="openModal();return false;">Get a Free Consultation →</a>
+      <a href="#services" class="btn-outline-w">See Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding:80px 5%;background:var(--white);">
+  <div class="reveal">
+    <p class="section-label">Consulting Services</p>
+    <h2 class="section-title">Strategic Support for<br>Every Stage of Business</h2>
+    <p class="section-desc">Whether you're starting up, scaling up, or preparing to exit — we provide the financial and compliance foundation you need to grow with confidence.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card reveal"><div class="card-icon">🏢</div><h3>Company Formation</h3><p>UK company formation, Companies House registration, articles of association, and all initial compliance filings handled from day one.</p><div class="card-price">From £149 <small>one-off</small></div></div>
+    <div class="card reveal"><div class="card-icon">📋</div><h3>Regulatory Compliance</h3><p>Ongoing compliance management — confirmation statements, annual accounts, statutory filings, and HMRC obligations — all handled on time.</p><div class="card-price">From £99 <small>/month</small></div></div>
+    <div class="card reveal"><div class="card-icon">📊</div><h3>Business Plan & Forecasts</h3><p>Investor-ready business plans with 3-year financial models, market analysis, and funding requirements — prepared to the standard banks and investors expect.</p><div class="card-price">From £499 <small>one-off</small></div></div>
+    <div class="card reveal"><div class="card-icon">🔍</div><h3>Financial Due Diligence</h3><p>Pre-acquisition or investment due diligence — reviewing financial statements, identifying risks, and providing a clear picture before you commit.</p><div class="card-price">From £799 <small>one-off</small></div></div>
+    <div class="card reveal"><div class="card-icon">👔</div><h3>Director Responsibilities</h3><p>Guidance for company directors on their legal and financial duties — helping you stay compliant and protected in your role.</p><div class="card-price">From £249 <small>/session</small></div></div>
+    <div class="card reveal"><div class="card-icon">💼</div><h3>Monthly Business Advisory</h3><p>Ongoing business advisory retainer — regular check-ins, financial reviews, and strategic guidance as your trusted business financial partner.</p><div class="card-price">From £249 <small>/month</small></div></div>
+  </div>
+</section>
+
+<section style="padding:80px 5%;background:var(--navy);">
+  <div style="text-align:center;" class="reveal">
+    <p class="section-label" style="color:var(--gold)">Why Businesses Choose Us</p>
+    <h2 class="section-title" style="color:var(--white);">More Than Just an Accountant</h2>
+    <p class="section-desc" style="color:rgba(255,255,255,.6);margin:0 auto;">We're a strategic partner — not just a compliance provider. We help businesses think bigger and grow smarter.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-icon">🎯</div><h3>Strategic Thinking</h3><p>We don't just file returns — we help you understand what your numbers mean and what to do about them.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🌍</div><h3>Multi-Jurisdiction</h3><p>Operating in UK, Australia, or UAE? We understand the compliance requirements in all three markets.</p></div>
+    <div class="why-card reveal"><div class="why-icon">💰</div><h3>Cost-Effective</h3><p>Board-level advice at India-competitive prices — typically 50–60% less than equivalent UK consulting firms.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🤝</div><h3>Long-Term Partner</h3><p>We invest in understanding your business so our advice improves over time — not a one-off engagement.</p></div>
+  </div>
+</section>
+
+<section style="padding:80px 5%;background:var(--off-white);">
+  <div style="text-align:center;max-width:700px;margin:0 auto;" class="reveal">
+    <p class="section-label">Who We Work With</p>
+    <h2 class="section-title">Built for Growing Businesses</h2>
+    <p class="section-desc">Our consulting clients range from pre-revenue startups to established SMEs across multiple sectors.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:48px;">
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;" class="reveal"><div style="font-size:32px;margin-bottom:12px;">🚀</div><h3 style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy);">Startups</h3><p style="font-size:13px;color:var(--text-light);margin-top:6px;">Pre-seed to Series A</p></div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;" class="reveal"><div style="font-size:32px;margin-bottom:12px;">🏗️</div><h3 style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy);">SMEs</h3><p style="font-size:13px;color:var(--text-light);margin-top:6px;">£100k–£10M turnover</p></div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;" class="reveal"><div style="font-size:32px;margin-bottom:12px;">🛒</div><h3 style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy);">E-Commerce</h3><p style="font-size:13px;color:var(--text-light);margin-top:6px;">Shopify, Amazon, WooCommerce</p></div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;" class="reveal"><div style="font-size:32px;margin-bottom:12px;">🏠</div><h3 style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy);">Property</h3><p style="font-size:13px;color:var(--text-light);margin-top:6px;">Investors & developers</p></div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;" class="reveal"><div style="font-size:32px;margin-bottom:12px;">💼</div><h3 style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy);">Professional Services</h3><p style="font-size:13px;color:var(--text-light);margin-top:6px;">Consultants, agencies, advisers</p></div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Ready to Grow with Confidence?</h2>
+  <p>Book a free consultation — let's discuss where you are now and where you want to get to.</p>
+  <button class="btn-navy" onclick="openModal()">Book Free Consultation →</button>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-mark">V</div><div class="logo-text"><span class="logo-name">VITTARA</span><span class="logo-sub">Financial Services</span></div></a><p>Expert accounting for UK 🇬🇧 Australia 🇦🇺 UAE 🇦🇪 — from Gujarat, India.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="bookkeeping.html">Bookkeeping</a></li><li><a href="tax.html">Tax Planning</a></li><li><a href="vat.html">VAT Returns</a></li><li><a href="paraplanning.html">Paraplanning</a></li><li><a href="advisory.html">Advisory</a></li><li><a href="consulting.html">Consulting</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="our-story.html">Our Story</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="resources.html">Resources</a></li><li><a href="gdpr.html">Data Security</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="uk.html">🇬🇧 UK</a></li><li><a href="australia.html">🇦🇺 Australia</a></li><li><a href="uae.html">🇦🇪 UAE</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="complaints.html">Complaints</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 Vittara — Darshik Pratapbhai Fataniya. Porbandar, Gujarat, India.</p><div class="social-links"><a href="https://www.linkedin.com/company/vittara" target="_blank" class="social-link">in</a><a href="https://twitter.com/vittarafinance" target="_blank" class="social-link">𝕏</a><a href="https://facebook.com/vittarafinance" target="_blank" class="social-link">f</a></div></div>
+</footer>
+
+<div class="sticky-cta"><span class="sticky-label">Book Free Consultation</span><a href="#" class="sticky-chat" onclick="openModal();return false;">📅</a></div>
+
+<div id="bookingModal" class="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 class="modal-title">Book a Consultation</h2>
+    <p class="modal-sub">Free 30-minute call — no obligation.</p>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-row"><div class="form-group"><label>First Name *</label><input type="text" required placeholder="John"></div><div class="form-group"><label>Last Name *</label><input type="text" required placeholder="Smith"></div></div>
+      <div class="form-group"><label>Email *</label><input type="email" required placeholder="john@example.com"></div>
+      <div class="form-row"><div class="form-group"><label>Date *</label><input type="date" required id="modal-date"></div><div class="form-group"><label>Service *</label><select required><option value="">Select...</option><option>Company Formation</option><option>Regulatory Compliance</option><option>Business Plan & Forecasts</option><option>Financial Due Diligence</option><option>Director Responsibilities</option><option>Monthly Advisory</option></select></div></div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:4px;">Confirm Booking →</button>
+    </form>
+  </div>
+</div>
+<script>
+function openModal(){document.getElementById('bookingModal').classList.add('active');document.body.style.overflow='hidden';const d=document.getElementById('modal-date');if(d){const t=new Date();t.setDate(t.getDate()+1);d.min=t.toISOString().split('T')[0];}}
+function closeModal(){document.getElementById('bookingModal').classList.remove('active');document.body.style.overflow='';}
+function handleSubmit(e){e.preventDefault();closeModal();window.location.href='thank-you.html';}
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=window.scrollY>50?'rgba(10,22,40,.98)':'rgba(10,22,40,.95)';});
+document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
+</script>
+<script src="chatbot.js"></script>
+
+<script src="cookie-consent.js"></script>
+<script src="chatbot.js"></script>
+</body></html>

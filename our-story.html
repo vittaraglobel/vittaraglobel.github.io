@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Our Story | Vittara – Founded by Darshik Pratapbhai Fataniya</title>
+<meta name="description" content="The story of how Darshik Pratapbhai Fataniya founded Vittara in Porbandar, Gujarat to deliver expert UK financial services at India-competitive pricing.">
+<style>
+:root{--navy:#0A1628;--navy-mid:#112240;--gold:#C9A84C;--gold-light:#E8C97A;--gold-pale:#F5EDD6;--white:#FFFFFF;--off-white:#F8F6F1;--text:#2C2C2C;--text-light:#6B7280;--border:#E5E0D5;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:"DM Sans",sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-weight:900;font-size:20px;color:var(--navy);}
+.logo-text{display:flex;flex-direction:column;}.logo-name{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:1px;}.logo-sub{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+.nav-links{display:flex;list-style:none;gap:36px;align-items:center;}.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s;}.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy)!important;padding:10px 22px;border-radius:6px;font-weight:600!important;}
+.nav-mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;}
+@media(max-width:860px){.nav-mobile-toggle{display:flex;}.nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,22,40,.98);flex-direction:column;padding:24px 5%;gap:8px;border-bottom:1px solid rgba(201,168,76,.2);}.nav-links.open{display:flex;}.nav-links li{width:100%;}.nav-links a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);}.nav-cta{text-align:center;margin-top:8px;}}
+.breadcrumb{padding:20px 5%;background:var(--off-white);border-bottom:1px solid var(--border);font-size:13px;color:var(--text-light);margin-top:72px;}.breadcrumb a{color:var(--text-light);text-decoration:none;}.breadcrumb a:hover{color:var(--gold);}.breadcrumb span{margin:0 8px;}
+.page-hero{padding:80px 5%;background:var(--navy);position:relative;overflow:hidden;}
+.page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 50%,rgba(201,168,76,.08) 0%,transparent 60%);}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px;}
+.page-hero-inner{position:relative;z-index:2;max-width:760px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:8px 18px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+.hero-badge::before{content:"";width:6px;height:6px;background:var(--gold);border-radius:50%;}
+.page-hero h1{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,64px);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:20px;}
+.page-hero h1 span{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.page-hero p{font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;max-width:560px;margin-bottom:36px;font-weight:300;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,168,76,.4);}
+.btn-outline-w{background:transparent;color:var(--white);padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.3);cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline-w:hover{border-color:var(--gold);color:var(--gold);}
+.btn-navy{background:var(--navy);color:var(--white);padding:16px 40px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-navy:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(10,22,40,.3);}
+.section-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.section-title{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:16px;}
+.section-desc{font-size:17px;color:var(--text-light);line-height:1.7;font-weight:300;}
+.cta-banner{padding:80px 5%;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);text-align:center;}
+.cta-banner h2{font-family:"Playfair Display",serif;font-size:36px;font-weight:700;color:var(--navy);margin-bottom:12px;}
+.cta-banner p{font-size:17px;color:rgba(10,22,40,.7);margin-bottom:32px;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:48px;}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 28px;transition:all .3s;}
+.why-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.3);transform:translateY(-4px);}
+.why-icon{font-size:28px;margin-bottom:16px;}
+.why-card h3{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px;}
+.why-card p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:48px;}
+.service-card{border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;background:var(--white);}
+.service-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(10,22,40,.08);}
+.service-card-icon{font-size:28px;margin-bottom:14px;}
+.service-card h3{font-family:"Playfair Display",serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.service-card p{font-size:13px;color:var(--text-light);line-height:1.6;margin-bottom:16px;}
+.service-price{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--gold);}
+.service-price small{font-size:12px;color:var(--text-light);font-family:"DM Sans",sans-serif;font-weight:400;}
+footer{background:#060E1C;padding:60px 5% 30px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.7;margin-top:16px;max-width:280px;}
+.footer-col h4{font-size:13px;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .3s;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.3);}
+.social-links{display:flex;gap:12px;}.social-link{width:36px;height:36px;background:rgba(255,255,255,.06);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;font-size:14px;transition:all .3s;}.social-link:hover{background:rgba(201,168,76,.2);color:var(--gold);}
+.modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;}.modal.active{display:flex;}
+.modal-content{background:var(--white);border-radius:20px;padding:36px;width:90%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;animation:modalIn .3s ease;}
+@keyframes modalIn{from{opacity:0;transform:scale(.95) translateY(20px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.modal-close{position:absolute;top:20px;right:20px;width:36px;height:36px;background:var(--off-white);border:none;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-light);}
+.modal-title{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:8px;}.modal-sub{font-size:14px;color:var(--text-light);margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}.form-group{margin-bottom:14px;}
+.form-group label{display:block;font-size:11px;font-weight:600;color:var(--text-light);letter-spacing:.8px;text-transform:uppercase;margin-bottom:5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--off-white);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:9px 12px;font-size:14px;font-family:"DM Sans",sans-serif;outline:none;transition:border-color .3s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+.sticky-cta{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.sticky-chat{width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;box-shadow:0 8px 24px rgba(201,168,76,.4);transition:all .3s;border:none;text-decoration:none;}
+.sticky-chat:hover{transform:scale(1.1);}.sticky-label{background:var(--navy);color:var(--white);font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none;}.sticky-cta:hover .sticky-label{opacity:1;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}.form-row{grid-template-columns:1fr;}}
+</style>
+<style>
+.story-section{padding:100px 5%;background:var(--white);}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.story-img-stack{position:relative;height:460px;}
+.story-img-main{width:78%;height:380px;object-fit:cover;border-radius:16px;position:absolute;top:0;left:0;box-shadow:0 24px 60px rgba(10,22,40,.15);}
+.story-img-card{position:absolute;bottom:20px;right:0;background:var(--navy);color:var(--white);padding:24px 28px;border-radius:16px;box-shadow:0 16px 40px rgba(10,22,40,.3);}
+.story-img-card-num{font-family:"Playfair Display",serif;font-size:32px;font-weight:700;color:var(--gold);}
+.story-img-card-label{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;}
+.story-text .section-desc{max-width:100%;margin-bottom:20px;}
+.timeline-section{padding:80px 5%;background:var(--off-white);}
+.timeline{position:relative;max-width:700px;margin:48px auto 0;padding-left:40px;}
+.timeline::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),var(--gold-light));}
+.timeline-entry{position:relative;margin-bottom:40px;padding-left:24px;}
+.timeline-entry::before{content:"";position:absolute;left:-48px;top:6px;width:16px;height:16px;background:var(--gold);border-radius:50%;border:3px solid var(--white);box-shadow:0 0 0 2px var(--gold);}
+.timeline-year{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.timeline-entry h3{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.timeline-entry p{font-size:14px;color:var(--text-light);line-height:1.7;}
+.values-section{padding:80px 5%;background:var(--navy);}
+.values-section .section-title{color:var(--white);}
+.values-section .section-desc{color:rgba(255,255,255,.6);}
+.certs-section{padding:60px 5%;background:var(--off-white);}
+.certs-grid{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px;}
+.cert-badge{display:flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 20px;font-size:14px;font-weight:600;color:var(--navy);}
+.cert-badge .cert-icon{font-size:20px;}
+@media(max-width:768px){.story-grid{grid-template-columns:1fr;}.story-img-stack{height:280px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="logo-mark">V</div><div class="logo-text"><span class="logo-name">VITTARA</span><span class="logo-sub">Financial Services</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#resources">Insights</a></li><li><a href="index.html#contact">Contact</a></li>
+    <li><a href="#" class="nav-cta" onclick="openModal();return false;">Book Consultation</a></li>
+  </ul>
+  <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a><span>›</span> Our Story</div>
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="hero-badge">Founded 2024 · Porbandar, India</div>
+    <h1>The Story Behind<br><span>Vittara</span></h1>
+    <p>A personal story of ambition, expertise, and a vision to deliver world-class financial services to UK businesses — from the heart of Gujarat, India.</p>
+    <div class="hero-actions"><a href="#story" class="btn-primary">Read Our Story →</a><a href="#" class="btn-outline-w" onclick="openModal();return false;">Work With Us</a></div>
+  </div>
+</section>
+
+<section id="story" class="story-section">
+  <div class="story-grid">
+    <div class="story-img-stack reveal">
+      <img class="story-img-main" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Vittara Team">
+      <div class="story-img-card">
+        <div class="story-img-card-num">🇬🇧 + 🇮🇳</div>
+        <div class="story-img-card-label">UK Expertise · India Efficiency</div>
+      </div>
+    </div>
+    <div class="story-text reveal">
+      <p class="section-label">The Founder's Story</p>
+      <h2 class="section-title">Darshik Pratapbhai Fataniya</h2>
+      <p class="section-desc">Growing up in Porbandar, Gujarat — the birthplace of Mahatma Gandhi — Darshik developed a deep respect for integrity, hard work, and service. These values are the foundation of everything Vittara stands for.</p>
+      <p class="section-desc" style="margin-top:16px;">After completing his B.Com, Darshik pursued advanced qualifications in finance — earning an MBA (Finance) and an MSc in Accounting & Finance, with a specific focus on UK financial markets, HMRC regulations, and FCA compliance.</p>
+      <p class="section-desc" style="margin-top:16px;">In 2024, Darshik founded Vittara with a clear vision: to bridge the gap between UK businesses that need premium financial services and India's exceptional pool of qualified accounting talent — at a price point that genuinely levels the playing field for growing businesses.</p>
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-top:32px;">
+        <p style="font-size:16px;font-style:italic;color:var(--text);line-height:1.7;margin-bottom:16px;">"I started Vittara because I saw too many great UK businesses being held back by expensive accountants or poor financial advice. I knew we could do better — and deliver more value."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gold);">D</div>
+          <div><div style="font-weight:700;color:var(--navy);font-size:15px;">Darshik Pratapbhai Fataniya</div><div style="font-size:13px;color:var(--text-light);">Founder & Director, Vittara</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div style="text-align:center;" class="reveal"><p class="section-label">Our Journey</p><h2 class="section-title">How Vittara Was Built</h2></div>
+  <div class="timeline">
+    <div class="timeline-entry reveal"><div class="timeline-year">2019–2021</div><h3>The Academic Foundation</h3><p>Darshik completes his B.Com, then pursues an MBA in Finance — developing deep expertise in financial management, corporate accounting, and business strategy.</p></div>
+    <div class="timeline-entry reveal"><div class="timeline-year">2021–2023</div><h3>MSc Accounting & Finance — UK Focus</h3><p>Specialising in UK-specific accounting standards, HMRC regulations, FCA compliance, and financial reporting — building the technical foundation for serving UK clients.</p></div>
+    <div class="timeline-entry reveal"><div class="timeline-year">Early 2024</div><h3>Vittara is Founded</h3><p>Vittara is established in Porbandar, Gujarat — with a clear mission to deliver UK-quality financial services at India-competitive pricing, starting with accounting, bookkeeping, and paraplanning.</p></div>
+    <div class="timeline-entry reveal"><div class="timeline-year">Mid 2024</div><h3>First UK Clients Onboarded</h3><p>The first UK clients come on board — an e-commerce business, an IFA practice, and a property investor. All three see significant results within the first quarter.</p></div>
+    <div class="timeline-entry reveal"><div class="timeline-year">2024–2025</div><h3>Expanding to Australia & UAE</h3><p>Building on UK success, Vittara extends its services to Australian and UAE businesses — adding BAS lodgements, GST returns, FTA compliance, and corporate tax to the service offering.</p></div>
+    <div class="timeline-entry reveal"><div class="timeline-year">Today</div><h3>Growing the Team & Impact</h3><p>Vittara continues to grow — hiring dedicated, hand-picked team members in Gujarat and expanding the service range to serve more UK, Australian, and UAE businesses.</p></div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div style="text-align:center;" class="reveal"><p class="section-label" style="color:var(--gold)">Our Values</p><h2 class="section-title">What We Stand For</h2></div>
+  <div class="why-grid" style="margin-top:48px;">
+    <div class="why-card reveal"><div class="why-icon">🎯</div><h3>Precision</h3><p>In accounting, precision matters. We check, double-check, and review everything before it leaves our team — because errors cost clients money and trust.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🤝</div><h3>Partnership</h3><p>We're not just a service provider — we're a long-term financial partner. We invest in understanding your business so we can genuinely help it grow.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🛡️</div><h3>Integrity</h3><p>Honest advice, transparent pricing, and complete confidentiality. We will always tell you what you need to hear — not just what you want to hear.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🌍</div><h3>Global Mindset</h3><p>Operating across UK, Australia, and UAE means we think globally. We bring international perspective to your local financial challenges.</p></div>
+  </div>
+</section>
+
+<section class="certs-section">
+  <div class="reveal"><p class="section-label">Qualifications & Certifications</p><h2 class="section-title" style="font-size:28px;">Our Credentials</h2></div>
+  <div class="certs-grid reveal">
+    <div class="cert-badge"><span class="cert-icon">🎓</span> B.Com (Accounting)</div>
+    <div class="cert-badge"><span class="cert-icon">🎓</span> MBA (Finance)</div>
+    <div class="cert-badge"><span class="cert-icon">🎓</span> MSc Accounting & Finance</div>
+    <div class="cert-badge"><span class="cert-icon">⚙️</span> Xero Certified Advisor</div>
+    <div class="cert-badge"><span class="cert-icon">📊</span> QuickBooks Certified</div>
+    <div class="cert-badge"><span class="cert-icon">🏦</span> HMRC MTD Ready</div>
+    <div class="cert-badge"><span class="cert-icon">🔒</span> GDPR Compliant</div>
+    <div class="cert-badge"><span class="cert-icon">📋</span> FCA Paraplanning Standards</div>
+  </div>
+</section>
+
+<section class="cta-banner"><h2>Want to Work with Vittara?</h2><p>Book a free 30-minute call with Darshik — no sales pitch, just an honest conversation about how we can help.</p><button class="btn-navy" onclick="openModal()">Book a Free Call →</button></section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-mark">V</div><div class="logo-text"><span class="logo-name">VITTARA</span><span class="logo-sub">Financial Services</span></div></a><p>Darshik Pratapbhai Fataniya — expert financial services for UK, Australia & UAE clients from Gujarat, India.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="bookkeeping.html">Bookkeeping</a></li><li><a href="tax.html">Tax Planning</a></li><li><a href="vat.html">VAT Returns</a></li><li><a href="index.html#services">Paraplanning</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="our-story.html">Our Story</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="gdpr.html">Data Security</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Countries</h4><ul><li><a href="uk.html">UK Clients</a></li><li><a href="australia.html">Australia</a></li><li><a href="uae.html">UAE</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 Vittara — Darshik Pratapbhai Fataniya. Porbandar, Gujarat, India.</p><div class="social-links"><a href="https://www.linkedin.com/company/vittara" target="_blank" class="social-link">in</a><a href="https://twitter.com/vittarafinance" target="_blank" class="social-link">𝕏</a><a href="https://facebook.com/vittarafinance" target="_blank" class="social-link">f</a></div></div>
+</footer>
+<div class="sticky-cta"><span class="sticky-label">Book Free Consultation</span><a href="#" class="sticky-chat" onclick="openModal();return false;">💬</a></div>
+<div id="bookingModal" class="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 class="modal-title">Book a Consultation</h2>
+    <p class="modal-sub">Free 30-minute discovery call — no obligation.</p>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-row"><div class="form-group"><label>First Name *</label><input type="text" required placeholder="John"></div><div class="form-group"><label>Last Name *</label><input type="text" required placeholder="Smith"></div></div>
+      <div class="form-group"><label>Email *</label><input type="email" required placeholder="john@example.com"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+44 7700 000000"></div>
+      <div class="form-row"><div class="form-group"><label>Date *</label><input type="date" required id="modal-date"></div><div class="form-group"><label>Service *</label><select required><option value="">Select...</option><option>Bookkeeping</option><option>Tax Planning</option><option>VAT Returns</option><option>Paraplanning</option><option>Advisory</option></select></div></div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:4px;">Confirm Booking →</button>
+    </form>
+  </div>
+</div>
+<script>
+function openModal(){document.getElementById('bookingModal').classList.add('active');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('bookingModal').classList.remove('active');document.body.style.overflow='';}
+function handleSubmit(e){e.preventDefault();closeModal();alert('Thank you! We will be in touch within 24 hours.');}
+function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=window.scrollY>50?'rgba(10,22,40,.98)':'rgba(10,22,40,.95)';});
+const d=document.getElementById('modal-date');if(d){const t=new Date();t.setDate(t.getDate()+1);d.min=t.toISOString().split('T')[0];}
+document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
+</script>
+
+<script src="cookie-consent.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

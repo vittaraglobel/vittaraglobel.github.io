@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Vittara | Select Your Country</title>
+<meta name="description" content="Vittara Financial Services — expert accounting, tax, and financial services for UK, Australian, and UAE businesses. Select your country to get started.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #112240;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #F5EDD6;
+    --white: #FFFFFF;
+    --text-muted: rgba(255,255,255,0.55);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── BACKGROUND ── */
+  .bg-layer {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(201,168,76,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 70% at 90% 80%, rgba(17,34,64,0.9) 0%, transparent 60%),
+      radial-gradient(ellipse 100% 100% at 50% 50%, #0A1628 0%, #060E1C 100%);
+  }
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.035) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .bg-orb {
+    position: fixed; border-radius: 50%; filter: blur(80px); z-index: 0;
+    animation: orbFloat 12s ease-in-out infinite;
+  }
+  .bg-orb-1 { width:500px; height:500px; background:rgba(201,168,76,0.05); top:-100px; right:-150px; animation-delay:0s; }
+  .bg-orb-2 { width:400px; height:400px; background:rgba(17,34,64,0.6); bottom:-100px; left:-100px; animation-delay:-6s; }
+  @keyframes orbFloat { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-30px) scale(1.05);} }
+
+  /* ── MAIN LAYOUT ── */
+  .wrap {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; min-height: 100vh;
+    padding: 40px 24px 120px;
+    text-align: center;
+  }
+
+  /* ── LOGO ── */
+  .logo {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none; margin-bottom: 56px;
+    animation: fadeUp 0.7s ease both;
+  }
+  .logo-mark {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-weight: 900; font-size: 24px; color: var(--navy);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+  }
+  .logo-text { text-align: left; }
+  .logo-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white); letter-spacing: 1.5px; display: block; }
+  .logo-sub { font-size: 10px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; display: block; margin-top: 2px; }
+
+  /* ── HEADLINE ── */
+  .headline {
+    animation: fadeUp 0.7s 0.1s ease both;
+    margin-bottom: 12px;
+  }
+  .headline h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 900; color: var(--white); line-height: 1.15;
+  }
+  .headline h1 span {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .subline {
+    font-size: 17px; color: var(--text-muted); line-height: 1.7;
+    margin-bottom: 52px; font-weight: 300; max-width: 480px; margin-left: auto; margin-right: auto;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  /* ── COUNTRY CARDS ── */
+  .country-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+    animation: fadeUp 0.7s 0.25s ease both;
+  }
+  .country-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    max-width: 820px; width: 100%;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  @media(max-width: 640px) { .country-grid { grid-template-columns: 1fr; max-width: 360px; } }
+
+  .country-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 20px; padding: 36px 24px 28px;
+    cursor: pointer; transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    position: relative; overflow: hidden;
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .country-card::before {
+    content: ''; position: absolute; inset: 0; border-radius: 20px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.04));
+    opacity: 0; transition: opacity 0.35s;
+  }
+  .country-card:hover { transform: translateY(-8px) scale(1.02); border-color: rgba(201,168,76,0.5); box-shadow: 0 24px 60px rgba(201,168,76,0.15); }
+  .country-card:hover::before { opacity: 1; }
+  .country-card.selected { border-color: var(--gold); background: rgba(201,168,76,0.12); }
+
+  .country-flag {
+    font-size: 56px; line-height: 1;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    transition: transform 0.35s;
+  }
+  .country-card:hover .country-flag { transform: scale(1.15) rotate(-3deg); }
+
+  .country-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; color: var(--white);
+  }
+  .country-desc {
+    font-size: 13px; color: var(--text-muted); line-height: 1.6; text-align: center;
+  }
+  .country-services {
+    display: flex; flex-direction: column; gap: 6px; width: 100%;
+    padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .country-service {
+    font-size: 12px; color: rgba(255,255,255,0.5);
+    display: flex; align-items: center; gap: 7px;
+  }
+  .country-service::before { content: '✓'; color: var(--gold); font-size: 10px; font-weight: 700; }
+  .country-enter {
+    margin-top: 12px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy); border: none; border-radius: 10px;
+    padding: 11px 28px; font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 700; cursor: pointer;
+    width: 100%; transition: all 0.25s; display: block;
+    text-align: center;
+  }
+  .country-card:hover .country-enter { box-shadow: 0 8px 24px rgba(201,168,76,0.4); }
+
+  /* UK special highlight */
+  .country-card.uk { border-color: rgba(201,168,76,0.2); }
+
+  /* ── TRUST ROW ── */
+  .trust-row {
+    display: flex; gap: 28px; flex-wrap: wrap; justify-content: center;
+    margin-top: 56px; animation: fadeUp 0.7s 0.5s ease both;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .trust-item span { color: var(--gold); font-size: 14px; }
+
+  /* ── COOKIE BANNER ON LANDING ── */
+  #lp-cookie {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,22,40,0.97); border-top: 1px solid rgba(201,168,76,0.2);
+    backdrop-filter: blur(12px);
+    padding: 18px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+    transform: translateY(100%);
+    animation: slideUp 0.6s 1.2s ease forwards;
+  }
+  @keyframes slideUp { to { transform: translateY(0); } }
+  #lp-cookie p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.5; flex: 1; min-width: 200px; }
+  #lp-cookie a { color: var(--gold); text-decoration: none; }
+  #lp-cookie a:hover { text-decoration: underline; }
+  .cookie-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-cookie-accept {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy); border: none; border-radius: 8px;
+    padding: 9px 22px; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .btn-cookie-accept:hover { transform: translateY(-1px); }
+  .btn-cookie-reject {
+    background: transparent; color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
+    padding: 9px 18px; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .btn-cookie-reject:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+  /* Loading state */
+  .country-card.loading .country-flag { animation: spin 0.6s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+
+<div class="wrap">
+
+  <!-- Logo -->
+  <a href="#" class="logo">
+    <div class="logo-mark">V</div>
+    <div class="logo-text">
+      <span class="logo-name">VITTARA</span>
+      <span class="logo-sub">Financial Services</span>
+    </div>
+  </a>
+
+  <!-- Headline -->
+  <div class="headline">
+    <h1>Expert Financial Services,<br><span>Tailored to Your Country</span></h1>
+  </div>
+  <p class="subline">Founded by Darshik Pratapbhai Fataniya. Select your country and we'll show you exactly how we can help your business — at 50–60% less than local firms.</p>
+
+  <!-- Country selector -->
+  <div class="country-label">Select Your Country to Get Started</div>
+
+  <div class="country-grid">
+
+    <!-- UK -->
+    <div class="country-card uk" onclick="selectCountry('uk', this)">
+      <div class="country-flag">🇬🇧</div>
+      <div class="country-name">United Kingdom</div>
+      <div class="country-desc">HMRC compliant bookkeeping, tax, VAT, and FCA paraplanning for UK businesses.</div>
+      <div class="country-services">
+        <div class="country-service">Bookkeeping from £149/month</div>
+        <div class="country-service">Self-assessment from £199</div>
+        <div class="country-service">VAT returns from £79</div>
+        <div class="country-service">FCA paraplanning from £85</div>
+      </div>
+      <button class="country-enter">Enter UK Site →</button>
+    </div>
+
+    <!-- Australia -->
+    <div class="country-card" onclick="selectCountry('au', this)">
+      <div class="country-flag">🇦🇺</div>
+      <div class="country-name">Australia</div>
+      <div class="country-desc">ATO compliant BAS lodgements, GST returns, and MYOB & Xero bookkeeping.</div>
+      <div class="country-services">
+        <div class="country-service">BAS lodgement from A$149</div>
+        <div class="country-service">Bookkeeping from A$199/month</div>
+        <div class="country-service">Company tax from A$399</div>
+        <div class="country-service">STP payroll compliance</div>
+      </div>
+      <button class="country-enter">Enter Australian Site →</button>
+    </div>
+
+    <!-- UAE -->
+    <div class="country-card" onclick="selectCountry('uae', this)">
+      <div class="country-flag">🇦🇪</div>
+      <div class="country-name">UAE</div>
+      <div class="country-desc">FTA VAT returns, corporate tax, IFRS reporting, and free zone accounting.</div>
+      <div class="country-services">
+        <div class="country-service">UAE VAT from AED 499</div>
+        <div class="country-service">Corporate tax returns</div>
+        <div class="country-service">Free zone accounting</div>
+        <div class="country-service">IFRS financial statements</div>
+      </div>
+      <button class="country-enter">Enter UAE Site →</button>
+    </div>
+
+  </div>
+
+  <!-- Trust row -->
+  <div class="trust-row">
+    <div class="trust-item"><span>🎓</span> MBA Finance · MSc Accounting</div>
+    <div class="trust-item"><span>⚙️</span> Xero & QuickBooks Certified</div>
+    <div class="trust-item"><span>🔒</span> GDPR Compliant</div>
+    <div class="trust-item"><span>✅</span> HMRC MTD Ready</div>
+    <div class="trust-item"><span>🇮🇳</span> Based in Gujarat, India</div>
+  </div>
+
+</div>
+
+<!-- Cookie Banner -->
+<div id="lp-cookie">
+  <p>We use cookies to improve your experience and analyse site usage. By clicking "Accept All" you consent to our use of cookies. <a href="cookie-policy.html">Learn more</a></p>
+  <div class="cookie-btns">
+    <button class="btn-cookie-reject" onclick="setCookieChoice('essential')">Essential Only</button>
+    <button class="btn-cookie-accept" onclick="setCookieChoice('all')">Accept All Cookies</button>
+  </div>
+</div>
+
+<script>
+  // Check if cookie choice already made — if so hide banner
+  if (localStorage.getItem('vt_cookies')) {
+    document.getElementById('lp-cookie').style.display = 'none';
+  }
+
+  function setCookieChoice(choice) {
+    localStorage.setItem('vt_cookies', choice);
+    const banner = document.getElementById('lp-cookie');
+    banner.style.transform = 'translateY(100%)';
+    banner.style.transition = 'transform 0.4s ease';
+    setTimeout(() => banner.style.display = 'none', 400);
+  }
+
+  function selectCountry(code, el) {
+    // Visual feedback
+    document.querySelectorAll('.country-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    el.querySelector('.country-flag').textContent = '⏳';
+
+    // Store country preference
+    localStorage.setItem('vt_country', code);
+    sessionStorage.setItem('vt_country', code);
+
+    // If no cookie choice yet, default to essential
+    if (!localStorage.getItem('vt_cookies')) {
+      localStorage.setItem('vt_cookies', 'essential');
+    }
+
+    // Redirect to appropriate page
+    const destinations = {
+      'uk': 'index.html',
+      'au': 'australia.html',
+      'uae': 'uae.html'
+    };
+
+    setTimeout(() => {
+      window.location.href = destinations[code] || 'index.html';
+    }, 500);
+  }
+</script>
+</body>
+</html>
